@@ -47,5 +47,12 @@ class Program
         dico["iPhone 12"] = tel1;
 
         Console.WriteLine(dico["ThinkPad"]);
+
+        CatalogueAppareils catalogue = new CatalogueAppareils();
+        catalogue.AjouterAppareil(pc1);
+        catalogue.AjouterAppareil(tel1);
+
+        catalogue.RechercherAppareil("ThinkPad");
+        catalogue.RechercherAppareil("Inconnu");
     }
 }
