@@ -27,5 +27,25 @@ class Program
         tel2.Modele = "Galaxy S21";
         tel2.DateFabrication = new DateTime(2022, 1, 1);
         tel2.NbCapteursPhoto = 3;
+
+        List<Appareil> liste = new List<Appareil>();
+        liste.Add(pc1);
+        liste.Add(pc2);
+        liste.Add(tel1);
+        liste.Add(tel2);
+
+        foreach (Appareil a in liste)
+        {
+            a.Allumer();
+            a.AfficherType();
+            a.AfficherGarantie();
+            a.AfficherInfos();
+            Console.WriteLine("-----");
+        }
+        Dictionary<string, Appareil> dico = new Dictionary<string, Appareil>();
+        dico["ThinkPad"] = pc1;
+        dico["iPhone 12"] = tel1;
+
+        Console.WriteLine(dico["ThinkPad"]);
     }
 }
